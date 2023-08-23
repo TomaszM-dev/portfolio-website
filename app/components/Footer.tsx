@@ -3,13 +3,12 @@ import React from "react";
 import Link from "@/node_modules/next/link";
 import { usePathname } from "next/navigation";
 
-const Nav = () => {
+const Footer = () => {
   const pathname = usePathname();
-
   return (
-    <div className="flex items-center justify-between py-10 px-4">
-      <h1 className="text-[1.5rem] font-[700]">TomaszM</h1>
-      <div className="flex gap-10 text-[1.1rem]">
+    <div className="flex flex-col gap-5 w-full p-4 items-center mt-14">
+      <h1 className="text-[1.6rem] font-[700]">TomaszM</h1>
+      <div className="flex gap-10 text-[1.1rem] my-3">
         <Link
           href="/"
           className={` ${pathname === "/" ? "text-text1" : "text-text2"}`}
@@ -23,10 +22,10 @@ const Nav = () => {
           About
         </Link>
         <Link
-          href="/skills"
-          className={` ${pathname === "/skills" ? "text-text1" : "text-text2"}`}
+          href="/services"
+          className={` ${pathname === "/about" ? "text-text1" : "text-text2"}`}
         >
-          Skills
+          Services
         </Link>
         <Link
           href="/portfolio"
@@ -45,9 +44,11 @@ const Nav = () => {
           Contact
         </Link>
       </div>
-      <button className="px-7 py-3 gradientBg rounded-xl">Resume</button>
+      <span className="text-text2">
+        @ All rights reserved by <span className="text-text1">TomaszM-dev</span>
+      </span>
     </div>
   );
 };
 
-export default Nav;
+export default Footer;

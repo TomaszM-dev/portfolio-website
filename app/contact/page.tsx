@@ -80,8 +80,6 @@ const Contact = () => {
               placeholder="Message"
               type="text"
               required
-              cols="10"
-              rows="5"
             ></textarea>
             <button className="w-[30%] px-7  py-4 gradientBg rounded-lg max-lg:w-full">
               Send

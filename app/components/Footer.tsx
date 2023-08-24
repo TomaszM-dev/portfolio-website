@@ -22,10 +22,10 @@ const Footer = () => {
           About
         </Link>
         <Link
-          href="/services"
-          className={` ${pathname === "/about" ? "text-text1" : "text-text2"}`}
+          href="/skills"
+          className={` ${pathname === "/skills" ? "text-text1" : "text-text2"}`}
         >
-          Services
+          Skills
         </Link>
         <Link
           href="/portfolio"

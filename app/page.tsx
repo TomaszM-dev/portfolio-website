@@ -82,7 +82,7 @@ export default function Home() {
               <Image
                 width={500}
                 height={500}
-                className="w-60 h-48"
+                className="w-40 h-40"
                 src={work}
                 alt="me"
               ></Image>
@@ -116,7 +116,10 @@ export default function Home() {
             <IoMdLogIn />
           </div>
         </div>
-        <div className="gradientBg flex-[50%] rounded-3xl w-full  flex flex-col items-center gap-10 p-5 px-5 relative">
+        <Link
+          href="/skills"
+          className="gradientBg flex-[50%] rounded-3xl w-full  flex flex-col items-center gap-10 p-5 px-5 relative"
+        >
           <div className="flex gap-8 mt-16 text-[2.4rem] rounded-lg ">
             <SiFigma />
             <SiPostgresql />
@@ -133,7 +136,7 @@ export default function Home() {
           <div className="text-text2 text-[2.4rem] absolute bottom-6 right-6  ">
             <IoMdLogIn />
           </div>
-        </div>
+        </Link>
         <div className="gradientBg flex-[25%] rounded-3xl w-full  flex flex-col items-center justify-between p-5 px-5 relative">
           <div className="flex gap-5 mt-8 text-[2.4rem]">
             <div className="p-4 rounded-full gradientBg">

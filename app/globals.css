@@ -82,3 +82,7 @@ a {
 .active {
   color: black;
 }
+
+.spacing {
+  word-spacing: 17px;
+}

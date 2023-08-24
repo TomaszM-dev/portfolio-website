@@ -20,7 +20,7 @@ const About = () => {
           ></Image>
         </div>
         <div className="flex-[70%] flex flex-col  ">
-          <h1 className="text-center text-[4rem] uppercase text-text2 font-[600] ">
+          <h1 className="text-center text-[2.5rem] uppercase text-text2 font-[600] ">
             Self summary
           </h1>
           <div className="gradientBg rounded-3xl flex flex-[70%] p-10 flex-col gap-1">
@@ -50,7 +50,7 @@ const About = () => {
           </div>
           <div className="flex flex-col gap-2 mt-8">
             <p className="text-text2">2019-04-23</p>
-            <p>Programming Web Apss certificate</p>
+            <p>Programming Web Apps certificate</p>
           </div>
         </div>
         <div className="gradientBg rounded-3xl flex flex-[50%]  flex-col p-10">

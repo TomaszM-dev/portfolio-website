@@ -73,7 +73,7 @@ const Nav = () => {
             >
               <div
                 onClick={(e) => e.stopPropagation()}
-                className="   absolute right-0 top-0 w-[20rem] h-screen  overflow-scroll flex flex-col items-center gap-5 bg-bg shadow-lg  shadow-text2  z-10 max-sm:w-[100%] "
+                className="   absolute right-0 top-0 w-[20rem] h-screen  overflow-scroll flex flex-col items-center gap-5 bg-bg bg-opacity-[98] shadow-lg  shadow-text2  z-10 max-sm:w-[100%] "
               >
                 <div
                   onClick={() => setActiveBar(!activeBar)}

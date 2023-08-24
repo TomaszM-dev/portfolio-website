@@ -8,7 +8,7 @@ const Footer = () => {
   return (
     <div className="flex flex-col gap-5 w-full p-4 items-center mt-14">
       <h1 className="text-[1.6rem] font-[700]">TomaszM</h1>
-      <div className="flex gap-10 text-[1.1rem] my-3">
+      <div className="flex gap-10 text-[1.1rem] my-3 max-md:flex-wrap max-md:justify-center">
         <Link
           href="/"
           className={` ${pathname === "/" ? "text-text1" : "text-text2"}`}

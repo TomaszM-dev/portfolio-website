@@ -1,3 +1,4 @@
+"use client";
 import me from "public/me2.png";
 import about from "public/about.png";
 import work from "public/work.png";
@@ -14,14 +15,22 @@ import {
   SiStripe,
 } from "react-icons/si";
 import { BsGithub, BsLinkedin } from "react-icons/bs";
+import { motion, AnimatePresence } from "framer-motion";
 import Link from "@/node_modules/next/link";
+import { easeInOut } from "framer-motion";
+import { upAnimationVariant } from "./animations/animations";
 
 export default function Home() {
   return (
-    <div className="w-full  my-10 flex flex-col gap-6 ">
-      <div className="flex gap-6  max-lg:flex-wrap  ">
-        <Link
-          href="/about"
+    <motion.div
+      initial={"offscreen"}
+      whileInView={"onscreen"}
+      transition={{ staggerChildren: 0.4 }}
+      className="w-full  my-10 flex flex-col gap-6 "
+    >
+      <div className="flex gap-6  max-lg:flex-wrap   ">
+        <motion.div
+          variants={upAnimationVariant}
           className="text-white flex-[50%] relative gradientBg rounded-3xl px-10 py-2  flex items-center gap-8 group-hover hover:text-text1 max-md:flex-col max-md:gap-4"
         >
           <Image
@@ -37,14 +46,17 @@ export default function Home() {
               Tomasz Malocha.
             </span>
             <span className="text-text2">
-              I am Web Developer based in Poland, Cracow
+              I am Web Developer based in Poland, Cracow (...)
             </span>
             <div className="hover:text-text1 transition-all text-text2 text-[2.4rem] absolute bottom-6 right-6  ">
               <IoMdLogIn />
             </div>
           </div>
-        </Link>
-        <div className="flex-[50%]  flex flex-col  gap-5 items-center">
+        </motion.div>
+        <motion.div
+          variants={upAnimationVariant}
+          className="flex-[50%]  flex flex-col  gap-5 items-center"
+        >
           <div className="w-full h-16 gradientBg rounded-3xl px-4 flex items-center justify-center">
             <span className=" text-center justify-center uppercase text-[0.8rem]">
               <span className="text-text2">I am available for </span> Freelance
@@ -97,7 +109,7 @@ export default function Home() {
               </div>
             </Link>
           </div>
-        </div>
+        </motion.div>
       </div>
       <div className="flex gap-6 max-lg:flex-wrap max-md:flex-col">
         <div className="gradientBg flex-[25%] rounded-3xl w-full  flex flex-col items-center justify-between p-5 px-5 relative">
@@ -183,6 +195,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }

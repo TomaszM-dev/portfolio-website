@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
+import Hydrate from "./components/Hydrate";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,11 +20,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className="container">
+        {/* <Hydrate> */}
+        <div className="container ">
           <Nav />
           {children}
           <Footer />
         </div>
+        {/* </Hydrate> */}
       </body>
     </html>
   );

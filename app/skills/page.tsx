@@ -16,7 +16,7 @@ const data = () => [
 const Skills = () => {
   return (
     <div className="w-full  my-10 flex flex-col gap-6 ">
-      <div className="flex gap-6  w-[100%] mx-auto ">
+      <div className="flex gap-6  w-[100%] mx-auto  max-md:flex-wrap max-md:flex-col-reverse">
         <div className="gradientBg rounded-3xl flex  flex-col flex-[35%] p-10">
           <h2 className="uppercase text-center mb-5 font-bold text-[1.2rem]">
             Languages
@@ -44,7 +44,7 @@ const Skills = () => {
               Dev Tools / Libraries
             </h2>
             <div className="flex flex-col gap-2 text-text2 justify-center items-center">
-              <span className=" spacing w-[70%] mx-auto text-center mt-2 ">
+              <span className=" spacing w-[70%] mx-auto text-center mt-2  max-xmd:w-[100%]">
                 Stripe, stripe-webhooks, Next-Auth, Zustand, LottieAnimations,
                 FramerMotion, bcrypt, Prisma Client, daisyUI, shadcnUI,
                 react-dom, react-router, react-intersection-observer, micro
@@ -56,7 +56,7 @@ const Skills = () => {
           </div>
         </div>
       </div>
-      <div className="flex gap-6 w-full">
+      <div className="flex gap-6 w-full max-xmd:flex-wrap max-xmd:flex-col-reverse">
         <div className="gradientBg flex-[25%] rounded-3xl w-full  flex flex-col items-center justify-between p-5 px-5 relative">
           <div className="flex gap-5 mt-8 text-[2.4rem]">
             <div className="p-4 rounded-full gradientBg">

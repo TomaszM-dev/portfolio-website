@@ -19,19 +19,19 @@ import Link from "@/node_modules/next/link";
 export default function Home() {
   return (
     <div className="w-full  my-10 flex flex-col gap-6 ">
-      <div className="flex gap-6">
+      <div className="flex gap-6  max-lg:flex-wrap  ">
         <Link
           href="/about"
-          className="text-white flex-[50%] relative gradientBg rounded-3xl px-10 py-2  flex items-center gap-8 group-hover hover:text-text1"
+          className="text-white flex-[50%] relative gradientBg rounded-3xl px-10 py-2  flex items-center gap-8 group-hover hover:text-text1 max-md:flex-col max-md:gap-4"
         >
           <Image
             width={500}
             height={500}
-            className="w-[16rem] h-[16rem] object-cover rounded-tl-3xl rounded-br-3xl"
+            className="w-[16rem] h-[16rem] object-cover rounded-tl-3xl rounded-br-3xl max-lg:p-5"
             src={me}
             alt="me"
           ></Image>
-          <div className="flex flex-col ">
+          <div className="flex flex-col max-md:mb-10">
             <h2 className="uppercase text-text2 ">A web developer</h2>
             <span className="text-[2rem] my-2 leading-[2.1rem]">
               Tomasz Malocha.
@@ -53,7 +53,7 @@ export default function Home() {
               work
             </span>
           </div>
-          <div className="flex w-full h-full gap-5">
+          <div className="flex w-full h-full gap-5 max-xmd:flex-wrap">
             <Link
               href="/about"
               className="gradientBg rounded-3xl w-full  flex flex-col items-center justify-between p-5 px-5 relative"
@@ -99,7 +99,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="flex gap-6">
+      <div className="flex gap-6 max-lg:flex-wrap max-md:flex-col">
         <div className="gradientBg flex-[25%] rounded-3xl w-full  flex flex-col items-center justify-between p-5 px-5 relative">
           <Image
             width={500}
@@ -120,7 +120,7 @@ export default function Home() {
           href="/skills"
           className="gradientBg flex-[50%] rounded-3xl w-full  flex flex-col items-center gap-10 p-5 px-5 relative"
         >
-          <div className="flex gap-8 mt-16 text-[2.4rem] rounded-lg ">
+          <div className="flex gap-8 mt-16 text-[2.4rem] rounded-lg max-md:flex-wrap max-md:items-center max-md:justify-center ">
             <SiFigma />
             <SiPostgresql />
             <SiPrisma />
@@ -157,19 +157,19 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="flex gap-6">
-        <div className="gradientBg flex-[50%] rounded-3xl w-full  flex  items-center  gap-6 p-5 px-5 relative">
-          <div className="flex flex-col items-center gradientBg px-10 py-5 rounded-3xl ">
+      <div className="flex gap-6 max-lg:flex-wrap">
+        <div className="gradientBg flex-[50%] rounded-3xl w-full  flex  items-center  gap-6 p-5 px-5 relative max-md:flex-col">
+          <div className="flex flex-col items-center gradientBg max-md:w-[70%] px-10 py-5 rounded-3xl ">
             <span className="text-[2rem] mb-3">03</span>
             <span className="text-text2 uppercase font-bold">studing</span>
             <span className="text-text2 uppercase font-bold">experience</span>
           </div>
-          <div className="flex flex-col items-center gradientBg px-10 py-5 rounded-3xl ">
+          <div className="flex flex-col items-center gradientBg max-md:w-[70%] px-10 py-5 rounded-3xl ">
             <span className="text-[2rem] mb-3">02</span>
             <span className="text-text2 uppercase font-bold">Client</span>
             <span className="text-text2 uppercase font-bold">worldwide</span>
           </div>
-          <div className="flex flex-col items-center gradientBg px-10 py-5 rounded-3xl ">
+          <div className="flex flex-col items-center gradientBg max-md:w-[70%] px-10 py-5 rounded-3xl ">
             <span className="text-[2rem] mb-3">+11</span>
             <span className="text-text2 uppercase font-bold">Total</span>
             <span className="text-text2 uppercase font-bold">projects</span>

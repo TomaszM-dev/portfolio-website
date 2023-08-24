@@ -7,11 +7,11 @@ import { BsGithub, BsLinkedin, BsInstagram } from "react-icons/bs";
 
 const Contact = () => {
   return (
-    <div className="w-full  my-20 flex flex-col gap-6 ">
-      <div className="flex gap-6  w-[100%] mx-auto ">
-        <div className="flex flex-col gap-4">
-          <div className="gradientBg rounded-3xl flex  flex-col flex-[35%] p-10 gap-12">
-            <div className="flex   gap-5">
+    <div className="w-full  my-20 flex flex-col gap-6  ">
+      <div className="flex gap-6  w-full mx-auto max-md:flex-col  ">
+        <div className="flex flex-col gap-4 ">
+          <div className="gradientBg rounded-3xl flex max-sm:pl-28  flex-col flex-[35%] p-10 gap-12  ">
+            <div className="flex    gap-5">
               <div className="p-4 gradientBg rounded-lg  text-[2rem]">
                 <AiOutlineMail />
               </div>
@@ -62,7 +62,7 @@ const Contact = () => {
           <h1 className="text-[2rem] font-[600] mb-10">
             Lets's work together.
           </h1>
-          <form className="flex-1 flex flex-col gap-5 font-[600] text-secondarytext max-lg:w-[70%]">
+          <form className="flex-1 flex flex-col gap-5 font-[600] text-secondarytext max-lg:w-[100%]">
             <input
               className="bg-bg2 rounded-md py-5 px-4  "
               type="text"

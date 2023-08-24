@@ -9,12 +9,12 @@ import { BsGithub, BsLinkedin } from "react-icons/bs";
 const About = () => {
   return (
     <div className="w-full  my-10 flex flex-col gap-6 ">
-      <div className="flex gap-6 w-full  ">
-        <div className="gradientBg rounded-3xl flex flex-[30%] ">
+      <div className="flex gap-6 w-full  max-xmd:flex-wrap max-xmd:flex-col-reverse   ">
+        <div className="gradientBg rounded-3xl flex flex-[30%]  max-xmd:flex-[100%] justify-center ">
           <Image
             width={700}
             height={700}
-            className="w-full h-full object-cover  rounded-3xl p-4"
+            className="w-full h-full max-lg:w-[22rem] object-cover  rounded-3xl p-4 "
             src={me}
             alt="me"
           ></Image>
@@ -24,7 +24,8 @@ const About = () => {
             Self summary
           </h1>
           <div className="gradientBg rounded-3xl flex flex-[70%] p-10 flex-col gap-1">
-            <h2 className="text-[2rem] mt-16">Tomasz Malocha.</h2>
+            <span className="uppercase text-[1.2rem]">About me</span>
+            <h2 className="text-[2rem] mt-10">Tomasz Malocha.</h2>
             <p className="text-text2 text-[1.1rem]">
               I am a Cracow, Poland based web developer with a focus of creating
               beatifull full stack apps. I am big fan of making website look
@@ -33,24 +34,24 @@ const About = () => {
           </div>
         </div>
       </div>
-      <div className="flex gap-6 w-full  ">
+      <div className="flex gap-6 w-full max-xmd:flex-wrap  ">
         <div className="gradientBg rounded-3xl flex flex-[50%]  flex-col p-10">
           <h3 className="uppercase text-[1.2rem]">Education</h3>
 
           <div className="flex flex-col gap-2 mt-8">
             <p className="text-text2">2016-2020</p>
-            <p>
+            <p className="text-[1.2rem]">
               IT Technical School | Zespół Szkół w Rabce-Zdroju im. ks. prof.
               Józefa Tischnera
             </p>
           </div>
           <div className="flex flex-col gap-2 mt-8">
             <p className="text-text2">2019-06-22</p>
-            <p>ECDL profile Certificate</p>
+            <p className="text-[1.2rem]">ECDL profile Certificate</p>
           </div>
           <div className="flex flex-col gap-2 mt-8">
             <p className="text-text2">2019-04-23</p>
-            <p>Programming Web Apps certificate</p>
+            <p className="text-[1.2rem]">Programming Web Apps certificate</p>
           </div>
         </div>
         <div className="gradientBg rounded-3xl flex flex-[50%]  flex-col p-10">
@@ -58,15 +59,19 @@ const About = () => {
 
           <div className="flex flex-col gap-2 mt-8">
             <p className="text-text2">2019-2020</p>
-            <p>IT Technical School | Internship from school</p>
+            <p className="text-[1.2rem]">
+              IT Technical School | Internship from school
+            </p>
           </div>
           <div className="flex flex-col gap-2 mt-8">
             <p className="text-text2">2023</p>
-            <p>Landing Page for company based in Norway (BUMA AS)</p>
+            <p className="text-[1.2rem]">
+              Landing Page for company based in Norway (BUMA AS)
+            </p>
           </div>
         </div>
       </div>
-      <div className="flex gap-6 w-full">
+      <div className="flex gap-6 w-full max-xmd:flex-wrap max-xmd:flex-col-reverse  ">
         <div className="gradientBg flex-[25%] rounded-3xl w-full  flex flex-col items-center justify-between p-5 px-5 relative">
           <div className="flex gap-5 mt-8 text-[2.4rem]">
             <div className="p-4 rounded-full gradientBg">

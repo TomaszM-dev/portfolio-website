@@ -32,14 +32,14 @@ const Portfolio = () => {
       <h1 className="text-[2rem] uppercase text-text2 font-bold">
         Some things i build:
       </h1>
-      <div className="flex gap-6 w-full  mt-10  ">
+      <div className="flex gap-6 w-full  mt-10  max-xl:flex-wrap ">
         <div className="gradientBg rounded-3xl flex flex-[30%] p-10 relative">
           <div className="flex flex-col gap-3 justify-center">
             <span className="uppercase font-bold text-text2">
               web app store
             </span>
             <h1 className="text-[1.4rem] font-bold">DegustoVR</h1>
-            <span className="">
+            <span className="text-[1.1rem]">
               DegustoVR is online store fully compatible with stripe payments,
               you can create your own account add items to cart, place an order.
             </span>
@@ -58,31 +58,31 @@ const Portfolio = () => {
             <HiOutlineExternalLink />
           </div>
         </div>
-        <div className="gradientBg rounded-3xl flex flex-[50%] items-center ">
+        <div className="gradientBg rounded-3xl flex flex-[50%] items-center justify-center  max-md:flex-col ">
           <Image
             width={700}
             height={700}
-            className="w-[34rem] h-[23rem] object-cover  rounded-3xl p-4 mt-2"
+            className="w-[28rem] object-cover  rounded-3xl p-4 mt-2"
             src={mac}
             alt="me"
           ></Image>
           <Image
             width={700}
             height={700}
-            className="w-[27rem] h-[23rem] object-cover  rounded-3xl p-4"
+            className="w-48 object-cover  rounded-3xl p-4"
             src={phone}
             alt="me"
           ></Image>
         </div>
       </div>
-      <div className="flex gap-6 w-full flex-row-reverse  mt-10  ">
-        <div className="gradientBg rounded-3xl flex flex-[30%] p-10 relative">
+      <div className="flex gap-6 w-full flex-row-reverse  mt-10  max-xl:flex-wrap   max-xl:flex-col">
+        <div className="gradientBg rounded-3xl flex flex-[30%] p-10 relative ">
           <div className="flex flex-col gap-3 justify-center">
             <span className="uppercase font-bold text-text2">
               web app store
             </span>
             <h1 className="text-[1.4rem] font-bold">B-Designed</h1>
-            <span className="">
+            <span className="text-[1.1rem]">
               B-Designed is online store and also website where you can post
               something, you can create your own account add items to cart,
               place an order, write a blog post.
@@ -99,24 +99,24 @@ const Portfolio = () => {
             <HiOutlineExternalLink />
           </div>
         </div>
-        <div className="gradientBg rounded-3xl flex flex-[50%]  items-center ">
+        <div className="gradientBg rounded-3xl flex flex-[50%] justify-center  items-center  max-md:flex-col ">
           <Image
             width={700}
             height={700}
-            className="w-[34rem] h-[17rem] object-cover  rounded-3xl p-4"
+            className="w-[26rem] object-cover  rounded-3xl p-4"
             src={bdesignedMac}
             alt="me"
           ></Image>
           <Image
             width={700}
             height={700}
-            className="w-[27rem] h-[24rem] object-cover rounded-3xl p-4"
+            className="w-48 object-cover rounded-3xl p-4"
             src={bdesignedPhone}
             alt="me"
           ></Image>
         </div>
       </div>
-      <div className="flex gap-6 w-full   mt-10  ">
+      <div className="flex gap-6 w-full   mt-10 max-xl:flex-wrap max-xl:flex-col ">
         <div className="gradientBg rounded-3xl flex flex-[30%] p-10 relative">
           <div className="flex flex-col gap-3 justify-center">
             <span className="uppercase font-bold text-text2">Landing Page</span>
@@ -139,24 +139,24 @@ const Portfolio = () => {
             <HiOutlineExternalLink />
           </div>
         </div>
-        <div className="gradientBg rounded-3xl flex flex-[50%] items-center ">
+        <div className="gradientBg rounded-3xl flex flex-[50%] items-center justify-center max-md:flex-col ">
           <Image
             width={700}
             height={700}
-            className="w-[34rem] h-[17rem] object-cover  rounded-3xl p-4"
+            className="w-[26rem] object-cover  rounded-3xl p-4"
             src={bumamac}
             alt="me"
           ></Image>
           <Image
             width={700}
             height={700}
-            className="w-[27rem] h-[23rem] object-bottom rounded-3xl p-4"
+            className="w-48 object-bottom rounded-3xl p-4"
             src={bumaphone}
             alt="me"
           ></Image>
         </div>
       </div>
-      <div className="flex gap-6 w-full   mt-10 flex-row-reverse  ">
+      <div className="flex gap-6 w-full   mt-10 flex-row-reverse  max-xl:flex-wrap max-xl:flex-col ">
         <div className="gradientBg rounded-3xl flex flex-[30%]  p-10 relative">
           <div className="flex flex-col gap-3 justify-center">
             <span className="uppercase font-bold text-text2">Banking App</span>
@@ -177,24 +177,24 @@ const Portfolio = () => {
             <HiOutlineExternalLink />
           </div>
         </div>
-        <div className="gradientBg rounded-3xl flex flex-[50%] items-center ">
+        <div className="gradientBg rounded-3xl flex flex-[50%] items-center justify-center  max-md:flex-col">
           <Image
             width={700}
             height={700}
-            className="w-[34rem] h-[18rem] object-cover  rounded-3xl p-4"
+            className="w-[28rem]  object-cover  rounded-3xl p-4"
             src={cryptomac}
             alt="me"
           ></Image>
           <Image
             width={700}
             height={700}
-            className="w-[27rem] h-[23rem] object-fit rounded-3xl p-4"
+            className="w-48 object-fit rounded-3xl p-4"
             src={cryptophone}
             alt="me"
           ></Image>
         </div>
       </div>
-      <div className="flex gap-6 w-full   mt-10   ">
+      <div className="flex gap-6 w-full   mt-10  max-xl:flex-wrap max-xl:flex-col  ">
         <div className="gradientBg rounded-3xl flex flex-[30%]  p-10 relative">
           <div className="flex flex-col gap-3 justify-center">
             <span className="uppercase font-bold text-text2">Landing page</span>
@@ -213,18 +213,18 @@ const Portfolio = () => {
             <HiOutlineExternalLink />
           </div>
         </div>
-        <div className="gradientBg rounded-3xl flex flex-[50%] items-center ">
+        <div className="gradientBg rounded-3xl flex flex-[50%] items-center justify-center max-sm:flex-col ">
           <Image
             width={700}
             height={700}
-            className="w-[34rem] h-[18rem] object-cover  rounded-3xl p-4"
+            className="w-[28rem]  object-cover  rounded-3xl p-4"
             src={wikbromac}
             alt="me"
           ></Image>
           <Image
             width={700}
             height={700}
-            className="w-[27rem] h-[23rem] object-fit rounded-3xl p-4"
+            className="w-48 object-fit rounded-3xl p-4"
             src={wikbrophone}
             alt="me"
           ></Image>

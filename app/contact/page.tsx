@@ -78,7 +78,6 @@ const Contact = () => {
             <textarea
               className="bg-bg2 rounded-md py-5 px-4 "
               placeholder="Message"
-              type="text"
               required
             ></textarea>
             <button className="w-[30%] px-7  py-4 gradientBg rounded-lg max-lg:w-full">

@@ -110,7 +110,7 @@ const Portfolio = () => {
           <Image
             width={700}
             height={700}
-            className="w-48 object-cover rounded-3xl p-4"
+            className="w-56 object-cover rounded-3xl p-4"
             src={bdesignedPhone}
             alt="me"
           ></Image>

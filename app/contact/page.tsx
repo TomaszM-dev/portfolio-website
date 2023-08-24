@@ -1,11 +1,36 @@
+"use client";
 import React from "react";
 import Link from "@/node_modules/next/link";
 import Image from "@/node_modules/next/image";
 import { AiOutlineMail, AiOutlinePhone } from "react-icons/ai";
 import { CiLocationOn } from "react-icons/ci";
 import { BsGithub, BsLinkedin, BsInstagram } from "react-icons/bs";
+import { useRef } from "react";
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
+  const form = useRef(null);
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_z9t8klm",
+        "template_z4xlitc",
+        form.current,
+        "zE7tbk7fYOIPB1uI5"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
+
   return (
     <div className="w-full  my-20 flex flex-col gap-6  ">
       <div className="flex gap-6  w-full mx-auto max-md:flex-col  ">
@@ -62,25 +87,36 @@ const Contact = () => {
           <h1 className="text-[2rem] font-[600] mb-10">
             Lets's work together.
           </h1>
-          <form className="flex-1 flex flex-col gap-5 font-[600] text-secondarytext max-lg:w-[100%]">
+          <form
+            ref={form}
+            onSubmit={sendEmail}
+            className="flex-1 flex flex-col gap-5 font-[600] text-secondarytext max-lg:w-[100%]"
+          >
             <input
               className="bg-bg2 rounded-md py-5 px-4  "
               type="text"
               placeholder="Name"
               required
+              name="user_name"
             />
             <input
               className="bg-bg2 rounded-md py-5 px-4 "
-              type="text"
+              type="email"
               required
               placeholder="Email"
+              name="user_email"
             />
             <textarea
               className="bg-bg2 rounded-md py-5 px-4 "
               placeholder="Message"
               required
+              name="message"
             ></textarea>
-            <button className="w-[30%] px-7  py-4 gradientBg rounded-lg max-lg:w-full">
+            <button
+              type="submit"
+              value="Send"
+              className="w-[30%] px-7  py-4 gradientBg rounded-lg max-lg:w-full"
+            >
               Send
             </button>
           </form>

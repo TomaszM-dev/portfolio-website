@@ -18,20 +18,26 @@ import { BsGithub, BsLinkedin } from "react-icons/bs";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "@/node_modules/next/link";
 import { easeInOut } from "framer-motion";
-import { upAnimationVariant } from "./animations/animations";
+import {
+  leftAnimationVariant,
+  rightAnimationVariant,
+  upAnimationVariant,
+  downAnimationVariant,
+  scaleAnimationVariant,
+} from "./animations/animations";
 
 export default function Home() {
   return (
     <motion.div
       initial={"offscreen"}
       whileInView={"onscreen"}
-      transition={{ staggerChildren: 0.4 }}
+      transition={{ staggerChildren: 0.3 }}
       className="w-full  my-10 flex flex-col gap-6 "
     >
-      <div className="flex gap-6  max-lg:flex-wrap   ">
+      <motion.div className="flex gap-6  max-lg:flex-wrap   ">
         <motion.div
-          variants={upAnimationVariant}
-          className="text-white flex-[50%] relative gradientBg rounded-3xl px-10 py-2  flex items-center gap-8 group-hover hover:text-text1 max-md:flex-col max-md:gap-4"
+          variants={leftAnimationVariant}
+          className="text-white flex-[50%] group relative gradientBg rounded-3xl px-10 py-2  flex items-center gap-8 group-hover hover:text-text1 max-md:flex-col max-md:gap-4"
         >
           <Image
             width={500}
@@ -48,13 +54,16 @@ export default function Home() {
             <span className="text-text2">
               I am Web Developer based in Poland, Cracow (...)
             </span>
-            <div className="hover:text-text1 transition-all text-text2 text-[2.4rem] absolute bottom-6 right-6  ">
+            <Link
+              href="/about"
+              className="group-hover:text-text1 group-hover:scale-125 transition-all text-text2 text-[2.4rem] absolute bottom-6 right-6  duration-1000 "
+            >
               <IoMdLogIn />
-            </div>
+            </Link>
           </div>
         </motion.div>
         <motion.div
-          variants={upAnimationVariant}
+          variants={rightAnimationVariant}
           className="flex-[50%]  flex flex-col  gap-5 items-center"
         >
           <div className="w-full h-16 gradientBg rounded-3xl px-4 flex items-center justify-center">
@@ -68,7 +77,7 @@ export default function Home() {
           <div className="flex w-full h-full gap-5 max-xmd:flex-wrap">
             <Link
               href="/about"
-              className="gradientBg rounded-3xl w-full  flex flex-col items-center justify-between p-5 px-5 relative"
+              className="gradientBg rounded-3xl w-full  flex flex-col items-center justify-between p-5 px-5 relative group"
             >
               <Image
                 width={500}
@@ -83,13 +92,16 @@ export default function Home() {
                 </span>
                 <span className="text-[1.2rem]">Credentials</span>
               </div>
-              <div className="text-text2 text-[2.4rem] absolute bottom-6 right-6  ">
+              <Link
+                href="/about"
+                className=" group-hover:text-text1 group-hover:scale-125 text-text2 text-[2.4rem] absolute bottom-6 right-6  duration-1000   "
+              >
                 <IoMdLogIn />
-              </div>
+              </Link>
             </Link>
             <Link
               href="/portfolio"
-              className="gradientBg rounded-3xl w-full  flex flex-col items-center justify-between p-5 px-5 relative"
+              className="gradientBg rounded-3xl w-full  flex flex-col items-center justify-between  group p-5 px-5 relative"
             >
               <Image
                 width={500}
@@ -104,15 +116,22 @@ export default function Home() {
                 </span>
                 <span className="text-[1.2rem]">Portfolio</span>
               </div>
-              <div className="text-text2 text-[2.4rem] absolute bottom-6 right-6  ">
+              <Link
+                href="/portfolio"
+                className="group-hover:text-text1 group-hover:scale-125
+                duration-1000  text-text2 text-[2.4rem] absolute bottom-6 right-6  "
+              >
                 <IoMdLogIn />
-              </div>
+              </Link>
             </Link>
           </div>
         </motion.div>
-      </div>
-      <div className="flex gap-6 max-lg:flex-wrap max-md:flex-col">
-        <div className="gradientBg flex-[25%] rounded-3xl w-full  flex flex-col items-center justify-between p-5 px-5 relative">
+      </motion.div>
+      <motion.div className="flex gap-6 max-lg:flex-wrap max-md:flex-col">
+        <motion.div
+          variants={upAnimationVariant}
+          className="group gradientBg flex-[25%] rounded-3xl w-full  flex flex-col items-center justify-between p-5 px-5 relative"
+        >
           <Image
             width={500}
             height={500}
@@ -124,13 +143,16 @@ export default function Home() {
             <span className="uppercase text-text2 text-[0.9rem]">My Cv</span>
             <span className="text-[1.2rem]">Download</span>
           </div>
-          <div className="text-text2 text-[2.4rem] absolute bottom-6 right-6  ">
+          <div
+            className="group-hover:text-text1 group-hover:scale-125
+duration-1000  text-text2 text-[2.4rem] absolute bottom-6 right-6  "
+          >
             <IoMdLogIn />
           </div>
-        </div>
-        <Link
-          href="/skills"
-          className="gradientBg flex-[50%] rounded-3xl w-full  flex flex-col items-center gap-10 p-5 px-5 relative"
+        </motion.div>
+        <motion.div
+          variants={downAnimationVariant}
+          className=" group gradientBg flex-[50%] rounded-3xl w-full  flex flex-col items-center gap-10 p-5 px-5 relative"
         >
           <div className="flex gap-8 mt-16 text-[2.4rem] rounded-lg max-md:flex-wrap max-md:items-center max-md:justify-center ">
             <SiFigma />
@@ -145,18 +167,33 @@ export default function Home() {
             <span className="uppercase text-text2 text-[0.9rem]">Skills</span>
             <span className="text-[1.2rem]">My favorite tech stack </span>
           </div>
-          <div className="text-text2 text-[2.4rem] absolute bottom-6 right-6  ">
+          <Link
+            href="/skills"
+            className="group-hover:text-text1 group-hover:scale-125
+duration-1000  text-text2 text-[2.4rem] absolute bottom-6 right-6  "
+          >
             <IoMdLogIn />
-          </div>
-        </Link>
-        <div className="gradientBg flex-[25%] rounded-3xl w-full  flex flex-col items-center justify-between p-5 px-5 relative">
+          </Link>
+        </motion.div>
+        <motion.div
+          variants={rightAnimationVariant}
+          className="group gradientBg flex-[25%] rounded-3xl w-full  flex flex-col items-center justify-between p-5 px-5 relative"
+        >
           <div className="flex gap-5 mt-8 text-[2.4rem]">
-            <div className="p-4 rounded-full gradientBg">
+            <Link
+              href="https://github.com/TomaszM-dev"
+              target="_blank"
+              className="hover:scale-125 hover:translate-y-[-2px] duration-500 transition-all p-4 rounded-full gradientBg cursor-pointer"
+            >
               <BsGithub />
-            </div>
-            <div className="p-4 rounded-full gradientBg">
+            </Link>
+            <Link
+              href="https://www.linkedin.com/in/tomaszmalocha/"
+              target="_blank"
+              className="hover:scale-125 hover:translate-y-[-2px] duration-500 transition-all p-4 rounded-full gradientBg cursor-pointer "
+            >
               <BsLinkedin />
-            </div>
+            </Link>
           </div>
           <div className="flex flex-col gap-1 self-start mt-6">
             <span className="uppercase text-text2 text-[0.9rem]">
@@ -164,12 +201,19 @@ export default function Home() {
             </span>
             <span className="text-[1.2rem]">Profiles</span>
           </div>
-          <div className="text-text2 text-[2.4rem] absolute bottom-6 right-6  ">
+          <Link
+            href="/contact"
+            className="group-hover:text-text1 group-hover:scale-125
+duration-1000  text-text2 text-[2.4rem] absolute bottom-6 right-6  "
+          >
             <IoMdLogIn />
-          </div>
-        </div>
-      </div>
-      <div className="flex gap-6 max-lg:flex-wrap">
+          </Link>
+        </motion.div>
+      </motion.div>
+      <motion.div
+        variants={scaleAnimationVariant}
+        className="flex gap-6 max-lg:flex-wrap"
+      >
         <div className="gradientBg flex-[50%] rounded-3xl w-full  flex  items-center  gap-6 p-5 px-5 relative max-md:flex-col">
           <div className="flex flex-col items-center gradientBg max-md:w-[70%] px-10 py-5 rounded-3xl ">
             <span className="text-[2rem] mb-3">03</span>
@@ -187,14 +231,18 @@ export default function Home() {
             <span className="text-text2 uppercase font-bold">projects</span>
           </div>
         </div>
-        <div className="gradientBg flex-[50%] rounded-3xl w-full  flex flex-col  justify-between p-5 px-5 relative">
+        <div className="group gradientBg flex-[50%] rounded-3xl w-full  flex flex-col  justify-between p-5 px-5 relative">
           <h2 className="text-[2rem] mt-10 ">Let's</h2>
           <h2 className="text-[2rem] ">work together.</h2>
-          <div className="text-text2 text-[2.4rem] absolute bottom-6 right-6  ">
+          <Link
+            href="/contact"
+            className="group-hover:text-text1 group-hover:scale-125
+duration-1000  text-text2 text-[2.4rem] absolute bottom-6 right-6  "
+          >
             <IoMdLogIn />
-          </div>
+          </Link>
         </div>
-      </div>
+      </motion.div>
     </motion.div>
   );
 }

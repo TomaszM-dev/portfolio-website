@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import Image from "@/node_modules/next/image";
 import mac from "public/degustomac.png";
@@ -23,16 +24,36 @@ import cryptophone from "public/cryptophone.png";
 import cryptomac from "public/cryptomax1.png";
 import wikbromac from "public/wikbromac.png";
 import wikbrophone from "public/wikbrophone.png";
-
 import { FaSass } from "react-icons/fa";
+import { motion, AnimatePresence } from "framer-motion";
+import { easeInOut } from "framer-motion";
+import {
+  leftAnimationVariant,
+  rightAnimationVariant,
+  upAnimationVariant,
+  downAnimationVariant,
+  scaleAnimationVariant,
+} from "../animations/animations";
+import Link from "@/node_modules/next/link";
 
 const Portfolio = () => {
   return (
-    <div className="w-full   my-20 flex flex-col gap-6 ">
-      <h1 className="text-[2rem] uppercase text-text2 font-bold">
+    <motion.div
+      initial={"offscreen"}
+      whileInView={"onscreen"}
+      transition={{ staggerChildren: 0.3 }}
+      className="w-full   my-20 flex flex-col gap-6 "
+    >
+      <motion.h1
+        variants={leftAnimationVariant}
+        className="text-[2rem] uppercase text-text2 font-bold"
+      >
         Some things i build:
-      </h1>
-      <div className="flex gap-6 w-full  mt-10  max-xl:flex-wrap ">
+      </motion.h1>
+      <motion.div
+        variants={upAnimationVariant}
+        className="flex gap-6 w-full  mt-10  max-xl:flex-wrap "
+      >
         <div className="gradientBg rounded-3xl flex flex-[30%] p-10 relative">
           <div className="flex flex-col gap-3 justify-center">
             <span className="uppercase font-bold text-text2">
@@ -54,8 +75,20 @@ const Portfolio = () => {
             </div>
           </div>
           <div className="absolute right-7 top-6 flex gap-4 text-[1.8rem]">
-            <BsGithub />
-            <HiOutlineExternalLink />
+            <Link
+              className="hover:scale-125 hover:translate-y-[-2px] duration-500 transition-all"
+              href="https://github.com/TomaszM-dev/degustoTs"
+              target={"_blank"}
+            >
+              <BsGithub />
+            </Link>
+            <Link
+              className="hover:scale-125 hover:translate-y-[-2px] duration-500 transition-all"
+              href="https://degusto-ts.vercel.app/"
+              target={"_blank"}
+            >
+              <HiOutlineExternalLink />
+            </Link>
           </div>
         </div>
         <div className="gradientBg rounded-3xl flex flex-[50%] items-center justify-center  max-md:flex-col ">
@@ -74,8 +107,11 @@ const Portfolio = () => {
             alt="me"
           ></Image>
         </div>
-      </div>
-      <div className="flex gap-6 w-full flex-row-reverse  mt-10  max-xl:flex-wrap   max-xl:flex-col">
+      </motion.div>
+      <motion.div
+        variants={upAnimationVariant}
+        className="flex gap-6 w-full flex-row-reverse  mt-10  max-xl:flex-wrap   max-xl:flex-col"
+      >
         <div className="gradientBg rounded-3xl flex flex-[30%] p-10 relative ">
           <div className="flex flex-col gap-3 justify-center">
             <span className="uppercase font-bold text-text2">
@@ -95,8 +131,20 @@ const Portfolio = () => {
             </div>
           </div>
           <div className="absolute right-7 top-6 flex gap-4 text-[1.8rem]">
-            <BsGithub />
-            <HiOutlineExternalLink />
+            <Link
+              className="hover:scale-125 hover:translate-y-[-2px] duration-500 transition-all"
+              href="https://github.com/TomaszM-dev/b-designed"
+              target={"_blank"}
+            >
+              <BsGithub />
+            </Link>
+            <Link
+              href="https://b-designed.vercel.app/"
+              target={"_blank"}
+              className="hover:scale-125 hover:translate-y-[-2px] duration-500 transition-all"
+            >
+              <HiOutlineExternalLink />
+            </Link>
           </div>
         </div>
         <div className="gradientBg rounded-3xl flex flex-[50%] justify-center  items-center  max-md:flex-col ">
@@ -115,8 +163,11 @@ const Portfolio = () => {
             alt="me"
           ></Image>
         </div>
-      </div>
-      <div className="flex gap-6 w-full   mt-10 max-xl:flex-wrap max-xl:flex-col ">
+      </motion.div>
+      <motion.div
+        variants={upAnimationVariant}
+        className="flex gap-6 w-full   mt-10 max-xl:flex-wrap max-xl:flex-col "
+      >
         <div className="gradientBg rounded-3xl flex flex-[30%] p-10 relative">
           <div className="flex flex-col gap-3 justify-center">
             <span className="uppercase font-bold text-text2">Landing Page</span>
@@ -135,8 +186,20 @@ const Portfolio = () => {
             </div>
           </div>
           <div className="absolute right-7 top-6 flex gap-4 text-[1.8rem]">
-            <BsGithub />
-            <HiOutlineExternalLink />
+            <Link
+              className="hover:scale-125 hover:translate-y-[-2px] duration-500 transition-all"
+              href="https://github.com/TomaszM-dev/BumaAs-website"
+              target={"_blank"}
+            >
+              <BsGithub />
+            </Link>
+            <Link
+              className="hover:scale-125 hover:translate-y-[-2px] duration-500 transition-all"
+              href="https://buma-as-website.vercel.app/"
+              target={"_blank"}
+            >
+              <HiOutlineExternalLink />
+            </Link>
           </div>
         </div>
         <div className="gradientBg rounded-3xl flex flex-[50%] items-center justify-center max-md:flex-col ">
@@ -155,7 +218,7 @@ const Portfolio = () => {
             alt="me"
           ></Image>
         </div>
-      </div>
+      </motion.div>
       <div className="flex gap-6 w-full   mt-10 flex-row-reverse  max-xl:flex-wrap max-xl:flex-col ">
         <div className="gradientBg rounded-3xl flex flex-[30%]  p-10 relative">
           <div className="flex flex-col gap-3 justify-center">
@@ -173,8 +236,20 @@ const Portfolio = () => {
             </div>
           </div>
           <div className="absolute right-7 top-6 flex gap-4 text-[1.8rem]">
-            <BsGithub />
-            <HiOutlineExternalLink />
+            <Link
+              className="hover:scale-125 hover:translate-y-[-2px] duration-500 transition-all"
+              href="https://github.com/TomaszM-dev/CryptoBanking-"
+              target={"_blank"}
+            >
+              <BsGithub />
+            </Link>
+            <Link
+              className="hover:scale-125 hover:translate-y-[-2px] duration-500 transition-all"
+              href="https://crypto-banking-fin.vercel.app/"
+              target={"_blank"}
+            >
+              <HiOutlineExternalLink />
+            </Link>
           </div>
         </div>
         <div className="gradientBg rounded-3xl flex flex-[50%] items-center justify-center  max-md:flex-col">
@@ -209,8 +284,20 @@ const Portfolio = () => {
             </div>
           </div>
           <div className="absolute right-7 top-6 flex gap-4 text-[1.8rem]">
-            <BsGithub />
-            <HiOutlineExternalLink />
+            <Link
+              className="hover:scale-125 hover:translate-y-[-2px] duration-500 transition-all"
+              href="https://github.com/TomaszM-dev/Vikbro-client-website"
+              target={"_blank"}
+            >
+              <BsGithub />
+            </Link>
+            <Link
+              className="hover:scale-125 hover:translate-y-[-2px] duration-500 transition-all"
+              href="https://vikbro.vercel.app/"
+              target={"_blank"}
+            >
+              <HiOutlineExternalLink />
+            </Link>
           </div>
         </div>
         <div className="gradientBg rounded-3xl flex flex-[50%] items-center justify-center max-sm:flex-col ">
@@ -230,7 +317,7 @@ const Portfolio = () => {
           ></Image>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

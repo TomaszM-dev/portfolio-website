@@ -2,51 +2,96 @@
 import React, { useState } from "react";
 import Link from "@/node_modules/next/link";
 import { usePathname } from "next/navigation";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, easeInOut } from "framer-motion";
 import hamburger from "public/hamburger.png";
 import Image from "@/node_modules/next/image";
+import { downAnimationVariant } from "../animations/animations";
 
 const Nav = () => {
   const [activeBar, setActiveBar] = useState(false);
   const pathname = usePathname();
 
+  const downAnimationVariant = {
+    offscreen: {
+      opacity: 0,
+      y: -60,
+      z: 10,
+    },
+    onscreen: {
+      opacity: 1,
+      y: 0,
+      z: 0,
+
+      transition: {
+        duration: 0.7,
+        ease: easeInOut,
+      },
+    },
+  };
+
   return (
-    <div className="flex items-center justify-between py-10 px-4 ">
-      <h1 className="text-[1.5rem] font-[700]">TomaszM</h1>
-      <div className="flex gap-10 text-[1.1rem] max-lg:hidden ">
+    <motion.div
+      variants={downAnimationVariant}
+      viewport={{
+        once: true,
+      }}
+      whileInView={"onscreen"}
+      initial={"offscreen"}
+      className="flex items-center justify-between py-10 px-4 "
+    >
+      <Link href="/" className="text-[1.5rem] font-[700]">
+        TomaszM
+      </Link>
+      <div className="flex gap-10 text-[1.1rem] max-lg:hidden relative ">
         <Link
           href="/"
-          className={` ${pathname === "/" ? "text-text1" : "text-text2"}`}
+          className={` ${
+            pathname === "/" ? "text-text1" : "text-text2"
+          } relative `}
         >
-          Home
+          <div className="after:content-[''] after:h-[3px] after:w-0 after:bottom-[-4px] after:right-0  after:bg-text1 after:absolute hover:after:w-full hover:after:left-0 after:duration-500  hover:text-text1 transition-all duration-500">
+            Home
+          </div>
         </Link>
         <Link
           href="/about"
-          className={` ${pathname === "/about" ? "text-text1" : "text-text2"}`}
+          className={` ${
+            pathname === "/about" ? "text-text1" : "text-text2"
+          } relative `}
         >
-          About
+          <div className="after:content-[''] after:h-[3px] after:w-0 after:bottom-[-4px] after:right-0  after:bg-text1 after:absolute hover:after:w-full hover:after:left-0 after:duration-500 hover:text-text1 transition-all duration-500">
+            About
+          </div>
         </Link>
         <Link
           href="/skills"
-          className={` ${pathname === "/skills" ? "text-text1" : "text-text2"}`}
+          className={` ${
+            pathname === "/skills" ? "text-text1" : "text-text2"
+          } relative `}
         >
-          Skills
+          <div className="after:content-[''] after:h-[3px] after:w-0 after:bottom-[-4px] after:right-0  after:bg-text1 after:absolute hover:after:w-full hover:after:left-0 after:duration-500 hover:text-text1 transition-all duration-500">
+            Skills
+          </div>
         </Link>
         <Link
           href="/portfolio"
           className={` ${
             pathname === "/portfolio" ? "text-text1" : "text-text2"
-          }`}
+          } relative `}
         >
-          Portfolio
+          <div className="after:content-[''] after:h-[3px] after:w-0 after:bottom-[-4px] after:right-0  after:bg-text1 after:absolute hover:after:w-full hover:after:left-0 after:duration-500 hover:text-text1 transition-all duration-500">
+            Portfolio
+          </div>
         </Link>
         <Link
+          href="/contact"
           className={` ${
             pathname === "/contact" ? "text-text1" : "text-text2"
-          }`}
-          href="/contact"
+          } relative `}
         >
-          Contact
+          <div className="after:content-[''] after:h-[3px] after:w-0 after:bottom-[-4px] after:right-0  after:bg-text1 after:absolute hover:after:w-full hover:after:left-0 after:duration-500 hover:text-text1 transition-all duration-500">
+            Contact
+          </div>
         </Link>
       </div>
       <div className="max-lg:flex hidden items-center flex-1 justify-end  ">
@@ -135,7 +180,7 @@ const Nav = () => {
           )}
         </AnimatePresence>
       </>
-    </div>
+    </motion.div>
   );
 };
 

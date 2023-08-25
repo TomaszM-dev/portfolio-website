@@ -7,11 +7,20 @@ import { CiLocationOn } from "react-icons/ci";
 import { BsGithub, BsLinkedin, BsInstagram } from "react-icons/bs";
 import { useRef } from "react";
 import emailjs from "@emailjs/browser";
+import { motion, AnimatePresence } from "framer-motion";
+import { easeInOut } from "framer-motion";
+import {
+  leftAnimationVariant,
+  rightAnimationVariant,
+  upAnimationVariant,
+  downAnimationVariant,
+  scaleAnimationVariant,
+} from "../animations/animations";
 
 const Contact = () => {
   const form = useRef(null);
 
-  const sendEmail = (e) => {
+  const sendEmail = (e: any) => {
     e.preventDefault();
 
     emailjs
@@ -22,21 +31,29 @@ const Contact = () => {
         "zE7tbk7fYOIPB1uI5"
       )
       .then(
-        (result) => {
+        (result: any) => {
           console.log(result.text);
           e.target.reset();
         },
-        (error) => {
+        (error: any) => {
           console.log(error.text);
         }
       );
   };
 
   return (
-    <div className="w-full  my-20 flex flex-col gap-6  ">
+    <motion.div
+      initial={"offscreen"}
+      whileInView={"onscreen"}
+      transition={{ staggerChildren: 0.3 }}
+      className="w-full  my-20 flex flex-col gap-6  "
+    >
       <div className="flex gap-6  w-full mx-auto max-md:flex-col  ">
         <div className="flex flex-col gap-4 ">
-          <div className="gradientBg rounded-3xl flex max-sm:pl-28  flex-col flex-[35%] p-10 gap-12  ">
+          <motion.div
+            variants={leftAnimationVariant}
+            className="gradientBg rounded-3xl flex max-sm:pl-28  flex-col flex-[35%] p-10 gap-12  "
+          >
             <div className="flex    gap-5">
               <div className="p-4 gradientBg rounded-lg  text-[2rem]">
                 <AiOutlineMail />
@@ -70,21 +87,45 @@ const Contact = () => {
                 <p>Cracow, Poland</p>
               </div>
             </div>
-          </div>
-          <div className="gradientBg rounded-3xl flex  flex-col flex-[35%] p-10 gap-12">
+          </motion.div>
+          <motion.div
+            variants={upAnimationVariant}
+            className="gradientBg rounded-3xl flex  flex-col flex-[35%] p-10 gap-12"
+          >
             <div className="flex flex-col items-center ">
               <span className="uppercase text-text2 text-[1.2rem] font-[600] mb-1 text-center ">
                 Social Info
               </span>
               <div className="flex mt-7 text-[2.5rem] gap-10 text-text1">
-                <BsGithub />
-                <BsLinkedin />
-                <BsInstagram />
+                <Link
+                  href="https://github.com/TomaszM-dev"
+                  target="_blank"
+                  className="hover:scale-125 hover:translate-y-[-2px] duration-500 transition-all p-4 rounded-full gradientBg cursor-pointer"
+                >
+                  <BsGithub />
+                </Link>
+                <Link
+                  href="https://www.linkedin.com/in/tomaszmalocha/"
+                  target="_blank"
+                  className="hover:scale-125 hover:translate-y-[-2px] duration-500 transition-all p-4 rounded-full gradientBg cursor-pointer "
+                >
+                  <BsLinkedin />
+                </Link>
+                <Link
+                  href="https://www.instagram.com/tommek.23/"
+                  target="_blank"
+                  className="hover:scale-125 hover:translate-y-[-2px] duration-500 transition-all p-4 rounded-full gradientBg cursor-pointer "
+                >
+                  <BsInstagram />
+                </Link>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
-        <div className="gradientBg rounded-3xl flex  flex-col flex-[65%] p-10">
+        <motion.div
+          variants={rightAnimationVariant}
+          className="gradientBg rounded-3xl flex  flex-col flex-[65%] p-10"
+        >
           <h1 className="text-[2rem] font-[600] mb-10">
             Lets's work together.
           </h1>
@@ -108,7 +149,7 @@ const Contact = () => {
               name="user_email"
             />
             <textarea
-              className="bg-bg2 rounded-md py-5 px-4 "
+              className="bg-bg2 rounded-md py-5 px-4 h-full"
               placeholder="Message"
               required
               name="message"
@@ -121,9 +162,9 @@ const Contact = () => {
               Send
             </button>
           </form>
-        </div>
+        </motion.div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

@@ -9,7 +9,7 @@ const Footer = () => {
   return (
     <div className="flex flex-col gap-5 w-full p-4 items-center mt-14">
       <h1 className="text-[1.6rem] font-[700]">TomaszM</h1>
-      <div className="flex gap-10 text-[1.3rem]">
+      <div className="flex gap-10 text-[1.5rem]">
         <Link
           href="https://github.com/TomaszM-dev"
           target="_blank"

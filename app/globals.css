@@ -85,3 +85,9 @@ a {
 .spacing {
   word-spacing: 17px;
 }
+
+.svg {
+  stroke: #000;
+  fill-opacity: 3;
+  stroke-width: 3px;
+}

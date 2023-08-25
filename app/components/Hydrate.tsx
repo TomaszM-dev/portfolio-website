@@ -9,8 +9,9 @@ const Hydrate = ({ children }: { children: ReactNode }) => {
 
   // wait till next js completes
   useEffect(() => {
-    setTimeout(() => {}, 2000);
-    setIsHydrated(true);
+    setTimeout(() => {
+      setIsHydrated(true);
+    }, 2500);
   }, []);
   return <>{isHydrated ? <>{children}</> : <LoadingAnimation />}</>;
 };

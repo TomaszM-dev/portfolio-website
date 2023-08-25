@@ -105,7 +105,13 @@ const Nav = () => {
           ></Image>
         </button>
       </div>
-      <button className="px-7 py-3 gradientBg rounded-xl">Resume</button>
+      <a
+        href="/TMalochaCV.pdf"
+        target="_blank"
+        className="px-7 py-3 gradientBg rounded-xl"
+      >
+        Resume
+      </a>
       <>
         <AnimatePresence>
           {activeBar && (

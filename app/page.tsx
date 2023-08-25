@@ -143,12 +143,14 @@ export default function Home() {
             <span className="uppercase text-text2 text-[0.9rem]">My Cv</span>
             <span className="text-[1.2rem]">Download</span>
           </div>
-          <div
+          <a
+            href="/TMalochaCV.pdf"
+            download="T-MalochaCV"
             className="group-hover:text-text1 group-hover:scale-125
 duration-1000  text-text2 text-[2.4rem] absolute bottom-6 right-6  "
           >
             <IoMdLogIn />
-          </div>
+          </a>
         </motion.div>
         <motion.div
           variants={downAnimationVariant}

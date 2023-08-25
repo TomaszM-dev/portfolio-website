@@ -2,6 +2,8 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { easeInOut } from "framer-motion";
+import svgIcon from "public/t.svg";
+import Image from "@/node_modules/next/image";
 
 const LoadingAnimation = () => {
   const showAnimationVariant = {
@@ -25,12 +27,17 @@ const LoadingAnimation = () => {
       initial={"offscreen"}
       whileInView={"onscreen"}
       transition={{ staggerChildren: 0.4 }}
-      className="w-full h-screen  flex items-center justify-center gap-3 text-[2.2rem] uppercase"
+      className="w-full h-screen flex-col flex items-center justify-center gap-3 text-[2.2rem] uppercase"
     >
-      <motion.span variants={showAnimationVariant}>Welcome</motion.span>
-      <motion.span variants={showAnimationVariant}>to</motion.span>
-      <motion.span variants={showAnimationVariant}>my</motion.span>
-      <motion.span variants={showAnimationVariant}>World</motion.span>
+      <motion.div variants={showAnimationVariant}>
+        <Image src={svgIcon} className="w-full h-full svg"></Image>
+      </motion.div>
+      <div className="flex gap-3 mb-40">
+        <motion.span variants={showAnimationVariant}>Welcome</motion.span>
+        <motion.span variants={showAnimationVariant}>to</motion.span>
+        <motion.span variants={showAnimationVariant}>my</motion.span>
+        <motion.span variants={showAnimationVariant}>World</motion.span>
+      </div>
     </motion.div>
   );
 };

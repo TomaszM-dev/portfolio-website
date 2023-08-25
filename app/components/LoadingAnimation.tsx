@@ -2,7 +2,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { easeInOut } from "framer-motion";
-import svgIcon from "public/t.svg";
+import svgIcon from "public/T.svg";
 import Image from "@/node_modules/next/image";
 
 const LoadingAnimation = () => {
@@ -30,7 +30,13 @@ const LoadingAnimation = () => {
       className="w-full h-screen flex-col flex items-center justify-center gap-3 text-[2.2rem] uppercase"
     >
       <motion.div variants={showAnimationVariant}>
-        <Image src={svgIcon} className="w-full h-full svg"></Image>
+        <Image
+          width={400}
+          height={400}
+          alt="t"
+          src={svgIcon}
+          className="w-full h-full svg"
+        ></Image>
       </motion.div>
       <div className="flex gap-3 mb-40">
         <motion.span variants={showAnimationVariant}>Welcome</motion.span>

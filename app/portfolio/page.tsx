@@ -52,9 +52,9 @@ const Portfolio = () => {
       </motion.h1>
       <motion.div
         variants={upAnimationVariant}
-        className="flex gap-6 w-full  mt-10  max-xl:flex-wrap "
+        className="flex gap-6 w-full    max-xl:flex-col  mt-10  max-xl:flex-wrap "
       >
-        <div className="gradientBg rounded-3xl flex flex-[30%] p-10 relative">
+        <div className="gradientBg  rounded-3xl flex flex-[30%] p-10 relative">
           <div className="flex flex-col gap-3 justify-center">
             <span className="uppercase font-bold text-text2">
               web app store

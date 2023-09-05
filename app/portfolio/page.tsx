@@ -64,7 +64,7 @@ const Portfolio = () => {
               DegustoVR is online store fully compatible with stripe payments,
               you can create your own account add items to cart, place an order.
             </span>
-            <div className="flex mt-5 gap-5 text-[2rem] text-text2">
+            <div className="flex mt-5 gap-5 text-[2rem] text-text2 max-sm:justify-center flex-wrap">
               <SiFigma />
               <SiPostgresql />
               <SiPrisma />
@@ -108,6 +108,7 @@ const Portfolio = () => {
           ></Image>
         </div>
       </motion.div>
+
       <motion.div
         variants={upAnimationVariant}
         className="flex gap-6 w-full flex-row-reverse  mt-10  max-xl:flex-wrap   max-xl:flex-col"

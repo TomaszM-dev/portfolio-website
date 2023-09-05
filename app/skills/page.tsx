@@ -56,11 +56,11 @@ const Skills = () => {
           >
             My skills
           </motion.h1>
-          <div className="gradientBg rounded-3xl flex  h-[26rem] flex-col p-10 items-center justify-center">
+          <div className="gradientBg rounded-3xl flex  h-[26rem] max-sm:h-[33rem] max-sm:mt-2 flex-col p-10 items-center justify-center">
             <h2 className="uppercase text-center mb-5 font-bold text-[1.2rem]">
               Dev Tools / Libraries
             </h2>
-            <div className="flex flex-col gap-2 text-text2 justify-center items-center">
+            <div className="flex flex-col gap-2 text-text2 justify-center items-center max-sm:p-2">
               <span className=" spacing w-[70%] mx-auto text-center mt-2  max-xmd:w-[100%]">
                 Stripe, stripe-webhooks, Next-Auth, Zustand, LottieAnimations,
                 FramerMotion, bcrypt, Prisma Client, daisyUI, shadcnUI,

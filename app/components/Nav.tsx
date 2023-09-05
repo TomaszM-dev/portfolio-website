@@ -37,7 +37,7 @@ const Nav = () => {
       }}
       whileInView={"onscreen"}
       initial={"offscreen"}
-      className="flex items-center justify-between py-10 px-4 "
+      className="flex items-center justify-between py-10 px-4 max-sm:px-0"
     >
       <Link href="/" className="text-[1.5rem] font-[700]">
         TomaszM

@@ -81,14 +81,14 @@ const Portfolio = () => {
           <div className="absolute right-7 top-6 flex gap-4 text-[1.8rem]">
             <Link
               className="hover:scale-125 hover:translate-y-[-2px] duration-500 transition-all"
-              href="https://github.com/TomaszM-dev/speedRent-admin-panel"
+              href="https://github.com/TomaszM-dev/speedRent-store"
               target={"_blank"}
             >
               <BsGithub />
             </Link>
             <Link
               className="hover:scale-125 hover:translate-y-[-2px] duration-500 transition-all"
-              href="https://speed-rent-admin-panel.vercel.app/"
+              href="https://speed-rent-store.vercel.app/"
               target={"_blank"}
             >
               <HiOutlineExternalLink />

@@ -4,7 +4,7 @@ import Image from "@/node_modules/next/image";
 import Link from "@/node_modules/next/link";
 import about from "public/about.png";
 import me from "public/me2.png";
-import { IoMdLogIn } from "react-icons/io";
+import { IoLogoYoutube, IoMdLogIn } from "react-icons/io";
 import { BsGithub, BsLinkedin } from "react-icons/bs";
 import { motion, AnimatePresence } from "framer-motion";
 import { easeInOut } from "framer-motion";
@@ -16,6 +16,8 @@ import {
   scaleAnimationVariant,
 } from "../animations/animations";
 import HomeFoot from "../components/ui/home-foot";
+import Video from "../components/video";
+import { AiFillYoutube } from "react-icons/ai";
 
 const About = () => {
   return (
@@ -45,13 +47,26 @@ const About = () => {
           <h1 className="text-center text-[2.5rem] uppercase text-text2 font-[600] ">
             Self summary
           </h1>
-          <div className="gradientBg rounded-3xl max-sm:rounded-xl f lex flex-[70%] p-10 flex-col gap-1">
-            <span className="uppercase text-[1.2rem]">About me</span>
-            <h2 className="text-[2rem] mt-10">Tomasz Malocha.</h2>
-            <p className="text-text2 text-[1.1rem]">
+          <div className="w-full gradientBg rounded-3xl max-sm:rounded-xl f lex flex-[70%] p-10 flex-col gap-1">
+            <div className="flex items-center justify-between w-full relative mb-8 ">
+              <span className="  uppercase text-[1.2rem] ">About me</span>
+              <div className="max-lg:hidden">
+                <Video />
+              </div>
+              <Link
+                href="https://www.youtube.com/embed/0UqhP8zOwX8?si=tIG-CJxRlVwat3vn"
+                target="_blank"
+              >
+                <IoLogoYoutube className="cursor-pointer lg:hidden text-4xl text-red" />
+              </Link>
+            </div>
+            <h2 className="text-[2rem] ">Tomasz Malocha.</h2>
+            <p className="text-text2 text-[1.1rem] w-[60%] max-lg:w-[100%] ">
               I am a Cracow, Poland based web developer with a focus of creating
               beatifull full stack apps. I am big fan of making website look
-              spectacular and in the same time functional. lorem20
+              spectacular and in the same time functional. More about me in my
+              <span className="text-text1"> introduction video.</span>
+              👉
             </p>
           </div>
         </motion.div>

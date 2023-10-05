@@ -37,7 +37,7 @@ const Nav = () => {
       }}
       whileInView={"onscreen"}
       initial={"offscreen"}
-      className="flex items-center justify-between py-10 px-4 max-sm:px-0"
+      className="flex items-center max-sm:fixed max-sm:w-full max-sm:bg-[#000] z-20 max-sm:px-10 max-sm:left-0 justify-between  py-10 px-4  "
     >
       <Link href="/" className="text-[1.5rem] font-[700]">
         TomaszM
@@ -124,7 +124,7 @@ const Nav = () => {
             >
               <div
                 onClick={(e) => e.stopPropagation()}
-                className="   absolute right-0 top-0 w-[20rem] h-screen  overflow-scroll flex flex-col items-center gap-5 bg-bg bg-opacity-[98] shadow-lg  shadow-text2  z-10 max-sm:w-[100%] "
+                className="   absolute  right-0 top-0 w-[20rem] h-screen  overflow-scroll flex flex-col items-center gap-5 bg-bg bg-opacity-[98] shadow-lg  shadow-text2  z-10 max-sm:w-[100%] "
               >
                 <div
                   onClick={() => setActiveBar(!activeBar)}

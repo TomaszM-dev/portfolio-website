@@ -22,7 +22,7 @@ const Skills = () => {
       initial={"offscreen"}
       whileInView={"onscreen"}
       transition={{ staggerChildren: 0.3 }}
-      className="w-full  my-10 flex flex-col gap-6 "
+      className="w-full   my-10 flex flex-col gap-6 "
     >
       <div className="flex gap-6  w-[100%] mx-auto  max-md:flex-wrap max-md:flex-col-reverse">
         <motion.div
@@ -35,20 +35,25 @@ const Skills = () => {
           <div className="flex flex-col gap-2 text-text2 text-center">
             <span>NextJS</span>
             <span>Prisma</span>
-            <span>PostgreSQL</span>
             <span>TypeScript</span>
             <span>Tailwind</span>
             <span>ReactJS</span>
-            <span>MongoDB</span>
             <span>JavaScript</span>
-            <span>GIT</span>
-            <span>Css/Sass/Styled-comp</span>
+            <span>CSS / Sass / Styled-Comp</span>
             <span>HTML</span>
+          </div>
+          <h2 className="mt-10 uppercase text-center my-5 font-bold text-[1.2rem]">
+            Data bases
+          </h2>
+          <div className="flex flex-col gap-2 text-text2 text-center">
+            <span>PostgreSQL</span>
+            <span>MySQL</span>
+            <span>MongoDB</span>
           </div>
         </motion.div>
         <motion.div
           variants={upAnimationVariant}
-          className="flex flex-col flex-[65%]  h-full "
+          className="flex flex-col flex-[65%]   "
         >
           <motion.h1
             variants={scaleAnimationVariant}
@@ -56,24 +61,31 @@ const Skills = () => {
           >
             My skills
           </motion.h1>
-          <div className="gradientBg rounded-3xl max-sm:rounded-xl flex  h-[26rem] max-sm:h-[33rem] max-sm:mt-2 flex-col p-10 items-center justify-center">
+          <div className="gradientBg rounded-3xl max-sm:rounded-xl flex  h-full max-sm:h-[33rem] max-sm:mt-2 flex-col p-10 items-center justify-center">
             <h2 className="uppercase text-center mb-5 font-bold text-[1.2rem]">
-              Dev Tools / Libraries
+              Libraries/Dependencies:
             </h2>
             <div className="flex flex-col gap-2 text-text2 justify-center items-center max-sm:p-2">
               <span className=" spacing w-[70%] mx-auto text-center mt-2  max-xmd:w-[100%]">
-                Stripe, stripe-webhooks, Next-Auth, Zustand, LottieAnimations,
-                FramerMotion, bcrypt, Prisma Client, daisyUI, shadcnUI,
-                react-dom, react-router, react-intersection-observer, micro
-                ,swr, next, figma, github, ChartJS, Vercel, Netlify,
-                Wordpress-CLI, React-Chart, React-Reducer, SEO-optimization,
-                Bootstrap, VS-code, swiper, prisma-schema, Railway, Email.js
+                Stripe stripe-webhooks Zustand LottieAnimations FramerMotion
+                bcrypt Prisma Client react-dom react-router
+                react-intersection-observer SWR ChartJS React-Chart
+                React-Reducer Bootstrap Swiper prisma-schema Email.js
+              </span>
+            </div>
+            <h2 className="uppercase  text-center pt-16 pb-5 font-bold text-[1.2rem]">
+              Dev Tools / Services
+            </h2>
+            <div className="flex flex-col gap-2 text-text2 justify-center items-center max-sm:p-2">
+              <span className=" spacing w-[70%] mx-auto text-center mt-2  max-xmd:w-[100%]">
+                Next-Auth micro next figma GitHub Vercel Netlify Wordpress-CLI
+                SEO-optimization Railway Clerk
               </span>
             </div>
           </div>
         </motion.div>
       </div>
-      <motion.div className="flex gap-6 w-full max-xmd:flex-wrap max-xmd:flex-col-reverse">
+      <motion.div className="flex  gap-6 w-full max-xmd:flex-wrap max-xmd:flex-col-reverse">
         <motion.div
           variants={rightAnimationVariant}
           className="group gradientBg flex-[25%] rounded-3xl max-sm:rounded-xl w-full  flex flex-col items-center justify-between p-5 px-5 relative"

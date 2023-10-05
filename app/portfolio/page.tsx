@@ -13,7 +13,7 @@ import {
   SiStripe,
   SiStyledcomponents,
 } from "react-icons/si";
-import { BsGithub, BsLinkedin } from "react-icons/bs";
+import { BsFiletypeSql, BsGithub, BsLinkedin } from "react-icons/bs";
 import { HiOutlineExternalLink } from "react-icons/hi";
 import { BiLogoReact, BiLineChart, BiLogoJavascript } from "react-icons/bi";
 import bdesignedMac from "public/b-designedmac.png";
@@ -21,9 +21,14 @@ import bdesignedPhone from "public/b-designedPhone.png";
 import bumamac from "public/bumamac.png";
 import bumaphone from "public/bumaphone.png";
 import cryptophone from "public/cryptophone.png";
+import dashboardphone from "public/dashboardphone.png";
 import cryptomac from "public/cryptomax1.png";
 import wikbromac from "public/wikbromac.png";
+import dashboardmac from "public/dashboardmac.png";
+import speedRentMac from "public/speedrentmac.png";
 import wikbrophone from "public/wikbrophone.png";
+import speedRentPhone from "public/speedrentphone.png";
+import shadcnLogo from "public/shadcn-logo.png";
 import { FaSass } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
 import { easeInOut } from "framer-motion";
@@ -54,7 +59,123 @@ const Portfolio = () => {
         variants={upAnimationVariant}
         className="flex gap-6 w-full    max-xl:flex-col  mt-10  max-xl:flex-wrap "
       >
-        <div className="gradientBg  rounded-3xl flex flex-[30%] p-10 relative">
+        <div className="gradientBg  rounded-3xl max-sm:rounded-xl flex flex-[30%] p-10 relative">
+          <div className="flex flex-col gap-3 justify-center">
+            <span className="uppercase font-bold text-text2">
+              Web app store
+            </span>
+            <h1 className="text-[1.4rem] font-bold">SpeedRent Store</h1>
+            <span className="text-[1.1rem]">
+              Introducing SpeedRent – Your Ultimate Vehicle Rental Solution!
+              Rent a vehicle on your terms, whether it's for a day or a month,
+              and experience the convenience of secure payments via Stripe
+            </span>
+            <div className="flex mt-5 gap-5 text-[2rem] text-text2 max-sm:justify-center flex-wrap">
+              <SiFigma />
+              <SiTailwindcss />
+              <SiTypescript />
+              <SiStripe />
+              <TbBrandNextjs />
+            </div>
+          </div>
+          <div className="absolute right-7 top-6 flex gap-4 text-[1.8rem]">
+            <Link
+              className="hover:scale-125 hover:translate-y-[-2px] duration-500 transition-all"
+              href="https://github.com/TomaszM-dev/speedRent-admin-panel"
+              target={"_blank"}
+            >
+              <BsGithub />
+            </Link>
+            <Link
+              className="hover:scale-125 hover:translate-y-[-2px] duration-500 transition-all"
+              href="https://speed-rent-admin-panel.vercel.app/"
+              target={"_blank"}
+            >
+              <HiOutlineExternalLink />
+            </Link>
+          </div>
+        </div>
+        <div className="gradientBg rounded-3xl max-sm:rounded-xl flex flex-[50%] items-center justify-center  max-md:flex-col ">
+          <Image
+            width={700}
+            height={700}
+            className="w-[28rem] object-cover  rounded-3xl max-sm:rounded-xl p-4 mt-2"
+            src={speedRentMac}
+            alt="me"
+          ></Image>
+          <Image
+            width={700}
+            height={700}
+            className="w-48 object-cover  rounded-3xl max-sm:rounded-xl p-4"
+            src={speedRentPhone}
+            alt="me"
+          ></Image>
+        </div>
+      </motion.div>
+      <motion.div
+        variants={upAnimationVariant}
+        className="flex gap-6 w-full flex-row-reverse   max-xl:flex-col  mt-10  max-xl:flex-wrap "
+      >
+        <div className="gradientBg  rounded-3xl max-sm:rounded-xl flex flex-[30%] p-10 relative">
+          <div className="flex flex-col gap-3 justify-center">
+            <span className="uppercase font-bold text-text2">
+              admin dashboard for SpeedRent
+            </span>
+            <h1 className="text-[1.4rem] font-bold">SpeedRent Admin</h1>
+            <span className="text-[1.1rem]">
+              in this admin panel , you have the tools to create and customize
+              stores effortlessly, manage product catalogs, add new products,
+              update existing ones, and organize them into categories and types
+              and track revenue.
+            </span>
+            <div className="flex mt-5 gap-5 text-[2rem] text-text2 max-sm:justify-center flex-wrap">
+              <SiPrisma />
+              <BsFiletypeSql />
+              <SiTailwindcss />
+              <SiTypescript />
+              <SiStripe />
+              <TbBrandNextjs />
+            </div>
+          </div>
+          <div className="absolute right-7 top-6 flex gap-4 text-[1.8rem]">
+            <Link
+              className="hover:scale-125 hover:translate-y-[-2px] duration-500 transition-all"
+              href="https://github.com/TomaszM-dev/speedRent-admin-panel"
+              target={"_blank"}
+            >
+              <BsGithub />
+            </Link>
+            <Link
+              className="hover:scale-125 hover:translate-y-[-2px] duration-500 transition-all"
+              href="https://speed-rent-admin-panel.vercel.app/"
+              target={"_blank"}
+            >
+              <HiOutlineExternalLink />
+            </Link>
+          </div>
+        </div>
+        <div className="gradientBg rounded-3xl max-sm:rounded-xl flex flex-[50%] items-center justify-center  max-md:flex-col ">
+          <Image
+            width={700}
+            height={700}
+            className="w-[28rem] object-cover  rounded-3xl max-sm:rounded-xl p-4 mt-2"
+            src={dashboardmac}
+            alt="me"
+          ></Image>
+          <Image
+            width={700}
+            height={700}
+            className="w-48 object-cover  rounded-3xl max-sm:rounded-xl p-4"
+            src={dashboardphone}
+            alt="me"
+          ></Image>
+        </div>
+      </motion.div>
+      <motion.div
+        variants={upAnimationVariant}
+        className="flex gap-6 w-full    max-xl:flex-col  mt-10  max-xl:flex-wrap "
+      >
+        <div className="gradientBg  rounded-3xl max-sm:rounded-xl flex flex-[30%] p-10 relative">
           <div className="flex flex-col gap-3 justify-center">
             <span className="uppercase font-bold text-text2">
               web app store
@@ -91,18 +212,18 @@ const Portfolio = () => {
             </Link>
           </div>
         </div>
-        <div className="gradientBg rounded-3xl flex flex-[50%] items-center justify-center  max-md:flex-col ">
+        <div className="gradientBg rounded-3xl max-sm:rounded-xl flex flex-[50%] items-center justify-center  max-md:flex-col ">
           <Image
             width={700}
             height={700}
-            className="w-[28rem] object-cover  rounded-3xl p-4 mt-2"
+            className="w-[28rem] object-cover  rounded-3xl max-sm:rounded-xl p-4 mt-2"
             src={mac}
             alt="me"
           ></Image>
           <Image
             width={700}
             height={700}
-            className="w-48 object-cover  rounded-3xl p-4"
+            className="w-48 object-cover  rounded-3xl max-sm:rounded-xl p-4"
             src={phone}
             alt="me"
           ></Image>
@@ -113,7 +234,7 @@ const Portfolio = () => {
         variants={upAnimationVariant}
         className="flex gap-6 w-full flex-row-reverse  mt-10  max-xl:flex-wrap   max-xl:flex-col"
       >
-        <div className="gradientBg rounded-3xl flex flex-[30%] p-10 relative ">
+        <div className="gradientBg rounded-3xl max-sm:rounded-xl flex flex-[30%] p-10 relative ">
           <div className="flex flex-col gap-3 justify-center">
             <span className="uppercase font-bold text-text2">
               web app store
@@ -148,18 +269,18 @@ const Portfolio = () => {
             </Link>
           </div>
         </div>
-        <div className="gradientBg rounded-3xl flex flex-[50%] justify-center  items-center  max-md:flex-col ">
+        <div className="gradientBg rounded-3xl max-sm:rounded-xl flex flex-[50%] justify-center  items-center  max-md:flex-col ">
           <Image
             width={700}
             height={700}
-            className="w-[26rem] object-cover  rounded-3xl p-4"
+            className="w-[26rem] object-cover  rounded-3xl max-sm:rounded-xl p-4"
             src={bdesignedMac}
             alt="me"
           ></Image>
           <Image
             width={700}
             height={700}
-            className="w-56 object-cover rounded-3xl p-4"
+            className="w-56 object-cover rounded-3xl max-sm:rounded-xl p-4"
             src={bdesignedPhone}
             alt="me"
           ></Image>
@@ -169,7 +290,7 @@ const Portfolio = () => {
         variants={upAnimationVariant}
         className="flex gap-6 w-full   mt-10 max-xl:flex-wrap max-xl:flex-col "
       >
-        <div className="gradientBg rounded-3xl flex flex-[30%] p-10 relative">
+        <div className="gradientBg rounded-3xl max-sm:rounded-xl flex flex-[30%] p-10 relative">
           <div className="flex flex-col gap-3 justify-center">
             <span className="uppercase font-bold text-text2">Landing Page</span>
             <h1 className="text-[1.4rem] font-bold">Buma AS</h1>
@@ -203,25 +324,25 @@ const Portfolio = () => {
             </Link>
           </div>
         </div>
-        <div className="gradientBg rounded-3xl flex flex-[50%] items-center justify-center max-md:flex-col ">
+        <div className="gradientBg rounded-3xl max-sm:rounded-xl flex flex-[50%] items-center justify-center max-md:flex-col ">
           <Image
             width={700}
             height={700}
-            className="w-[26rem] object-cover  rounded-3xl p-4"
+            className="w-[26rem] object-cover  rounded-3xl max-sm:rounded-xl p-4"
             src={bumamac}
             alt="me"
           ></Image>
           <Image
             width={700}
             height={700}
-            className="w-48 object-bottom rounded-3xl p-4"
+            className="w-48 object-bottom rounded-3xl max-sm:rounded-xl p-4"
             src={bumaphone}
             alt="me"
           ></Image>
         </div>
       </motion.div>
       <div className="flex gap-6 w-full   mt-10 flex-row-reverse  max-xl:flex-wrap max-xl:flex-col ">
-        <div className="gradientBg rounded-3xl flex flex-[30%]  p-10 relative">
+        <div className="gradientBg rounded-3xl max-sm:rounded-xl flex flex-[30%]  p-10 relative">
           <div className="flex flex-col gap-3 justify-center">
             <span className="uppercase font-bold text-text2">Banking App</span>
             <h1 className="text-[1.4rem] font-bold">CryptoBanking</h1>
@@ -253,25 +374,25 @@ const Portfolio = () => {
             </Link>
           </div>
         </div>
-        <div className="gradientBg rounded-3xl flex flex-[50%] items-center justify-center  max-md:flex-col">
+        <div className="gradientBg rounded-3xl max-sm:rounded-xl flex flex-[50%] items-center justify-center  max-md:flex-col">
           <Image
             width={700}
             height={700}
-            className="w-[28rem]  object-cover  rounded-3xl p-4"
+            className="w-[28rem]  object-cover  rounded-3xl max-sm:rounded-xl p-4"
             src={cryptomac}
             alt="me"
           ></Image>
           <Image
             width={700}
             height={700}
-            className="w-48 object-fit rounded-3xl p-4"
+            className="w-48 object-fit rounded-3xl max-sm:rounded-xl p-4"
             src={cryptophone}
             alt="me"
           ></Image>
         </div>
       </div>
       <div className="flex gap-6 w-full   mt-10  max-xl:flex-wrap max-xl:flex-col  ">
-        <div className="gradientBg rounded-3xl flex flex-[30%]  p-10 relative">
+        <div className="gradientBg rounded-3xl max-sm:rounded-xl flex flex-[30%]  p-10 relative">
           <div className="flex flex-col gap-3 justify-center">
             <span className="uppercase font-bold text-text2">Landing page</span>
             <h1 className="text-[1.4rem] font-bold">Vikbro</h1>
@@ -301,18 +422,18 @@ const Portfolio = () => {
             </Link>
           </div>
         </div>
-        <div className="gradientBg rounded-3xl flex flex-[50%] items-center justify-center max-sm:flex-col ">
+        <div className="gradientBg rounded-3xl max-sm:rounded-xl flex flex-[50%] items-center justify-center max-sm:flex-col ">
           <Image
             width={700}
             height={700}
-            className="w-[28rem]  object-cover  rounded-3xl p-4"
+            className="w-[28rem]  object-cover  rounded-3xl max-sm:rounded-xl p-4"
             src={wikbromac}
             alt="me"
           ></Image>
           <Image
             width={700}
             height={700}
-            className="w-48 object-fit rounded-3xl p-4"
+            className="w-48 object-fit rounded-3xl max-sm:rounded-xl p-4"
             src={wikbrophone}
             alt="me"
           ></Image>

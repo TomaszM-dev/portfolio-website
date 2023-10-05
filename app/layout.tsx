@@ -24,11 +24,13 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width" />
       </Head>
       <body className={inter.className}>
+        {/* <Hydrate> */}
         <div className="container ">
           <Nav />
           {children}
           <Footer />
         </div>
+        {/* </Hydrate> */}
       </body>
     </html>
   );

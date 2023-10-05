@@ -52,7 +52,7 @@ const Contact = () => {
         <div className="flex flex-col gap-4 ">
           <motion.div
             variants={leftAnimationVariant}
-            className="gradientBg rounded-3xl flex max-sm:pl-28  flex-col flex-[35%] p-10 gap-12  "
+            className="gradientBg rounded-3xl max-sm:rounded-xl flex   flex-col flex-[35%] p-10 gap-12  "
           >
             <div className="flex    gap-5">
               <div className="p-4 gradientBg rounded-lg  text-[2rem]">
@@ -90,7 +90,7 @@ const Contact = () => {
           </motion.div>
           <motion.div
             variants={upAnimationVariant}
-            className="gradientBg rounded-3xl flex  flex-col flex-[35%] p-10 gap-12"
+            className="gradientBg rounded-3xl max-sm:rounded-xl flex  flex-col flex-[35%] p-10 gap-12"
           >
             <div className="flex flex-col items-center ">
               <span className="uppercase text-text2 text-[1.2rem] font-[600] mb-1 text-center ">
@@ -124,7 +124,7 @@ const Contact = () => {
         </div>
         <motion.div
           variants={rightAnimationVariant}
-          className="gradientBg rounded-3xl flex  flex-col flex-[65%] p-10"
+          className="gradientBg rounded-3xl max-sm:rounded-xl flex  flex-col flex-[65%] p-10"
         >
           <h1 className="text-[2rem] font-[600] mb-10">
             Lets's work together.

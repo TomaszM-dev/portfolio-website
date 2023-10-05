@@ -3,7 +3,7 @@ import React from "react";
 import { BsGithub, BsLinkedin } from "react-icons/bs";
 import Image from "@/node_modules/next/image";
 import Link from "@/node_modules/next/link";
-import about from "public/about.png";
+import about2 from "public/about2.png";
 import me from "public/me2.png";
 import { IoMdLogIn } from "react-icons/io";
 import { motion, AnimatePresence } from "framer-motion";
@@ -27,7 +27,7 @@ const Skills = () => {
       <div className="flex gap-6  w-[100%] mx-auto  max-md:flex-wrap max-md:flex-col-reverse">
         <motion.div
           variants={leftAnimationVariant}
-          className="gradientBg rounded-3xl flex  flex-col flex-[35%] p-10"
+          className="gradientBg rounded-3xl max-sm:rounded-xl flex  flex-col flex-[35%] p-10"
         >
           <h2 className="uppercase text-center mb-5 font-bold text-[1.2rem]">
             Languages
@@ -56,7 +56,7 @@ const Skills = () => {
           >
             My skills
           </motion.h1>
-          <div className="gradientBg rounded-3xl flex  h-[26rem] max-sm:h-[33rem] max-sm:mt-2 flex-col p-10 items-center justify-center">
+          <div className="gradientBg rounded-3xl max-sm:rounded-xl flex  h-[26rem] max-sm:h-[33rem] max-sm:mt-2 flex-col p-10 items-center justify-center">
             <h2 className="uppercase text-center mb-5 font-bold text-[1.2rem]">
               Dev Tools / Libraries
             </h2>
@@ -76,7 +76,7 @@ const Skills = () => {
       <motion.div className="flex gap-6 w-full max-xmd:flex-wrap max-xmd:flex-col-reverse">
         <motion.div
           variants={rightAnimationVariant}
-          className="group gradientBg flex-[25%] rounded-3xl w-full  flex flex-col items-center justify-between p-5 px-5 relative"
+          className="group gradientBg flex-[25%] rounded-3xl max-sm:rounded-xl w-full  flex flex-col items-center justify-between p-5 px-5 relative"
         >
           <div className="flex gap-5 mt-8 text-[2.4rem]">
             <Link
@@ -110,7 +110,7 @@ duration-1000 text-text2 text-[2.4rem] absolute bottom-6 right-6  "
         </motion.div>
         <motion.div
           variants={upAnimationVariant}
-          className="group gradientBg flex-[50%] rounded-3xl w-full  flex flex-col  p-5 px-5 relative"
+          className="group gradientBg flex-[50%] rounded-3xl max-sm:rounded-xl w-full  flex flex-col  p-5 px-5 relative"
         >
           <h2 className="text-[2rem] mt-24 ">Let's</h2>
           <h2 className="text-[2rem] ">work together.</h2>
@@ -125,13 +125,13 @@ duration-1000 text-text2 text-[2.4rem] absolute bottom-6 right-6  "
         <motion.div
           variants={rightAnimationVariant}
           href="/about"
-          className="group flex-[25%] gradientBg rounded-3xl w-full  flex flex-col items-center justify-between p-5 px-5 relative"
+          className="group flex-[25%] gradientBg rounded-3xl max-sm:rounded-xl w-full  flex flex-col items-center justify-between p-5 px-5 relative"
         >
           <Image
             width={500}
             height={500}
-            className="p-5 h-26 w-26 mb-2"
-            src={about}
+            className="p-5 h-40 w-40 mb-2 object-cover"
+            src={about2}
             alt="me"
           ></Image>
           <div className="flex flex-col gap-1 self-start mb-1">

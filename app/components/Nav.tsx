@@ -176,7 +176,7 @@ const Nav = () => {
                     className={`text-[1.7rem]   ${
                       pathname === "/contact" ? "text-text1" : "text-text2"
                     }`}
-                    href="/about"
+                    href="/contact"
                   >
                     Contact
                   </Link>

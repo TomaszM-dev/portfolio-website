@@ -22,7 +22,7 @@ const Skills = () => {
       initial={"offscreen"}
       whileInView={"onscreen"}
       transition={{ staggerChildren: 0.3 }}
-      className="w-full   my-10 flex flex-col gap-6 "
+      className="w-full   my-10 flex flex-col gap-6 max-sm:mt-40"
     >
       <div className="flex gap-6  w-[100%] mx-auto  max-md:flex-wrap max-md:flex-col-reverse">
         <motion.div

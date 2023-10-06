@@ -3,7 +3,7 @@ import Image from "next/image";
 import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import me from "public/me2.png";
+import mee from "public/mee.png";
 import { IoMdLogIn } from "react-icons/io";
 
 const HomeHero = () => {
@@ -14,10 +14,10 @@ const HomeHero = () => {
         className="text-white flex-[50%] group relative gradientBg rounded-3xl max-sm:rounded-xl px-10 py-2  flex items-center gap-8 group-hover hover:text-text1 max-md:flex-col max-md:gap-4 overflow-hidden"
       >
         <Image
-          width={500}
-          height={500}
-          className="w-[18rem] h-[18rem] object-cover rounded-tl-3xl rounded-br-3xl max-lg:p-5 max-sm:p-0 max-sm:my-4  "
-          src={me}
+          width={1000}
+          height={1000}
+          className="w-[13rem] h-[17rem]  object-cover rounded-tl-xl rounded-br-xl max-lg:p-5 max-sm:p-0 max-sm:my-4  "
+          src={mee}
           alt="me"
         ></Image>
         <div className="flex flex-col max-md:mb-10">

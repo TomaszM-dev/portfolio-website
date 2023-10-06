@@ -46,7 +46,7 @@ const Contact = () => {
       initial={"offscreen"}
       whileInView={"onscreen"}
       transition={{ staggerChildren: 0.3 }}
-      className="w-full  my-20 flex flex-col gap-6  "
+      className="w-full  my-20 flex flex-col gap-6 max-sm:mt-40 "
     >
       <div className="flex gap-6  w-full mx-auto max-md:flex-col  ">
         <div className="flex flex-col gap-4 ">

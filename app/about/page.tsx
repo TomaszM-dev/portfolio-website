@@ -3,7 +3,7 @@ import React from "react";
 import Image from "@/node_modules/next/image";
 import Link from "@/node_modules/next/link";
 import about from "public/about.png";
-import me from "public/me2.png";
+import me2 from "public/me2.png";
 import { IoLogoYoutube, IoMdLogIn } from "react-icons/io";
 import { BsGithub, BsLinkedin } from "react-icons/bs";
 import { motion, AnimatePresence } from "framer-motion";
@@ -25,7 +25,7 @@ const About = () => {
       initial={"offscreen"}
       whileInView={"onscreen"}
       transition={{ staggerChildren: 0.3 }}
-      className="w-full  my-10 flex flex-col gap-6 "
+      className="w-full  my-10 flex flex-col gap-6 max-sm:mt-40"
     >
       <div className="flex gap-6 w-full  max-xmd:flex-wrap max-xmd:flex-col-reverse   ">
         <motion.div
@@ -36,7 +36,7 @@ const About = () => {
             width={700}
             height={700}
             className="w-full h-full max-lg:w-[22rem] object-cover  max-sm:w-full max-sm:h-[29rem] rounded-3xl max-sm:rounded-xl p -4 "
-            src={me}
+            src={me2}
             alt="me"
           ></Image>
         </motion.div>

@@ -22,7 +22,7 @@ export default function Home() {
       initial={"offscreen"}
       whileInView={"onscreen"}
       transition={{ staggerChildren: 0.3 }}
-      className="w-full  my-10 flex flex-col gap-6 "
+      className="w-full  my-10 flex flex-col gap-6 max-sm:mt-40 "
     >
       <motion.div className="flex gap-6  w-full max-lg:flex-wrap    ">
         <HomeHero />

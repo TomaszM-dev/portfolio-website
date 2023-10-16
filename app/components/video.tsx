@@ -8,9 +8,9 @@ const Video = () => {
         width="190"
         height="215"
         className="rounded-2xl"
-        src="https://www.youtube.com/embed/0UqhP8zOwX8?si=RYh8qtK4Kt5zir9J"
+        src="https://www.youtube.com/embed/swQfujNqRHI?si=_XTVDUSB7cx2t8yw"
         title="YouTube video player"
-        frameborder="0"
+        frameborder="1"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowfullscreen="true"
       ></iframe>

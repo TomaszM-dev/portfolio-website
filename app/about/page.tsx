@@ -53,11 +53,8 @@ const About = () => {
               <div className="max-lg:hidden">
                 <Video />
               </div>
-              <Link
-                href="https://www.youtube.com/embed/0UqhP8zOwX8?si=tIG-CJxRlVwat3vn"
-                target="_blank"
-              >
-                <IoLogoYoutube className="cursor-pointer lg:hidden text-4xl text-red" />
+              <Link href="https://youtu.be/swQfujNqRHI" target="_blank">
+                <IoLogoYoutube className="cursor-pointer lg:hidden text-4xl text-red " />
               </Link>
             </div>
             <h2 className="text-[2rem] ">Tomasz Malocha.</h2>

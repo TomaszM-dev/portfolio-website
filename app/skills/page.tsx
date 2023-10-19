@@ -30,7 +30,7 @@ const Skills = () => {
           className="gradientBg rounded-3xl max-sm:rounded-xl flex  flex-col flex-[35%] p-10"
         >
           <h2 className="uppercase text-center mb-5 font-bold text-[1.2rem]">
-            Languages
+            Front-end Tools
           </h2>
           <div className="flex flex-col gap-2 text-text2 text-center">
             <span>NextJS</span>
